@@ -16,6 +16,7 @@ mot8 = "coques"
 mot9 = "oignon"
 mot10 = "consul"
 mots = [mot1, mot2, mot3, mot4, mot5, mot6, mot7, mot8, mot9, mot10]
+PlaceLettre = ["","","","","",""]
 
 TableauMot = random.choice(mots)
 print(TableauMot)
@@ -49,11 +50,18 @@ def CompteurLettre(TableauMot):
             compteur = compteur + 1
     print("il y à", compteur, lettre, "dans votre mot")
 
+def LettreBonneCase(TableauMot):
+    for i in range(len(TableauMot)):
+        if PlaceLettre[i] == 1:
+            print(Back.RED + Essai[i], "est bien placé !")
+    
+    
+    
 Position(TableauMot)
 CompteurLettre(TableauMot)
 Essai = input ("essayez de trouver le mot ")
 Tentative(TableauMot)
-
+LettreBonneCase(TableauMot)
 
 
 input()
