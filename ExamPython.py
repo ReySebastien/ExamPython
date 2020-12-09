@@ -41,11 +41,19 @@ def Tentative(TableauMot):
             else:
                 lettre = lettre
     print("il y a", lettre, "lettres correspondante à votre essai !")
-            
+
+def CompteurLettre(TableauMot):
+    compteur = 0
+    for i in TableauMot:
+        if lettre == i:
+            compteur = compteur + 1
+    print("il y à", compteur, lettre, "dans votre mot")
 
 Position(TableauMot)
+CompteurLettre(TableauMot)
 Essai = input ("essayez de trouver le mot ")
 Tentative(TableauMot)
+
 
 
 input()
