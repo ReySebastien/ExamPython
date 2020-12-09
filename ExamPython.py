@@ -14,8 +14,9 @@ mot7 = "douves"
 mot8 = "coques"
 mot9 = "oignon"
 mot10 = "consul"
-
-a="bonjour"
+mots = [mot1, mot2, mot3, mot4, mot5, mot6, mot7, mot8, mot9, mot10]
+a= random.choice(mots)
+print(a)
 lettre= input("quelle lettre voulez vous chercher? ")
 i=0
  
