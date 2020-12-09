@@ -20,9 +20,10 @@ mots = [mot1, mot2, mot3, mot4, mot5, mot6, mot7, mot8, mot9, mot10]
 TableauMot = random.choice(mots)
 print(TableauMot)
 
-lettre= input("quelle lettre voulez vous chercher? ")
+lettre = input("quelle lettre voulez vous chercher? ")
 
 i=0
+j = 0
 nombreLettre = 0
 
 
@@ -31,6 +32,20 @@ def Position(TableauMot):
         if TableauMot[i] == lettre:
             print(Back.RED + lettre, "est présent au caractère n°", i+1)
 
+def Tentative(TableauMot):
+    lettre = 0
+    for i in TableauMot:
+        for j in Essai:
+            if i == j: 
+                lettre = lettre + 1
+            else:
+                lettre = lettre
+    print("il y a", lettre, "lettres correspondante à votre essai !")
+            
+
 Position(TableauMot)
+Essai = input ("essayez de trouver le mot ")
+Tentative(TableauMot)
+
 
 input()
